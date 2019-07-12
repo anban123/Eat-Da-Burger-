@@ -16,7 +16,7 @@ $(function() {
       function() {
         console.log("changed sleep to", newSleep);
         // Reload the page to get the updated list
-        loburgerion.reload();
+        location.reload();
       }
     );
   });
@@ -38,7 +38,7 @@ $(function() {
       function() {
         console.log("created new burger");
         // Reload the page to get the updated list
-        loburgerion.reload();
+        location.reload();
       }
     );
   });
