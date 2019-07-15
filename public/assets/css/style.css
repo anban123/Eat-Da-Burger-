@@ -1,18 +1,26 @@
-* {
-  text-align: center
-}
-
 img {
   text-align: center;
   height: 300px;
   width: 250px;
 }
 
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+.create-form {
+  text-align: center;
+}
+
 li {
   padding: 5px;
   margin: 5px;
   background: #faebd7;
-}
+} 
 
 .label {
   font-weight: bold; 
@@ -26,4 +34,4 @@ li {
 
 .form-group {
   margin-bottom: 5px;
-}
+} 
