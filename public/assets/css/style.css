@@ -1,3 +1,13 @@
+* {
+  text-align: center
+}
+
+img {
+  text-align: center;
+  height: 300px;
+  width: 250px;
+}
+
 li {
   padding: 5px;
   margin: 5px;

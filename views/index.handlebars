@@ -1,24 +1,36 @@
-<h1>burgers!</h1>
+<center><img src="https://res.cloudinary.com/teepublic/image/private/s--QGmjn0Qd--/t_Preview/b_rgb:fefeff,c_limit,f_jpg,h_630,q_90,w_630/v1501533190/production/designs/1779865_1.jpg"/></center>
 
-<h2>burgers that are not sleepy!</h2>
+<h1>Eat-Da-Burger!</h1>
 
-<ul>
-  {{#each burgers}}
-    {{#unless sleepy}} 
-      {{> burgers/burger-block sleep=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
+<div class="container">
+  <div class="row">
 
-<h2>burgers that are sleepy!</h2> 
+    <div class="col-md-6">
+        <div id="good-burgers"></div>
+        <ul>
+          {{#each burgers}} 
+            {{#unless devoured}} 
+              {{> burgers/burger-block devour=true}}
+            {{/unless}}
+          {{/each}}
+        </ul>
+    </div>
 
-<ul>
-  {{#each burgers}}
-    {{#if sleepy}}
-      {{> burgers/burger-block sleep=false}}
-    {{/if}}
-  {{/each}}
-</ul>
+    <div class="col-md-6">
+        <div id="devoured-burgers"></div>
+        <ul>
+          {{#each burgers}}
+            {{#if devoured}}
+              {{> burgers/burger-block devour=false}}
+            {{/if}}
+          {{/each}}
+        </ul>
+    </div>
+
+  </div>
+</div>
+        
+
 
 <h2>Add a burger</h2>
 <form class="create-form">
@@ -28,11 +40,11 @@
     <input type="text" id="ca" name="name">
   </div>
 
-  <div class="form-group">
-    <label for="slee">Sleepy?</label><br>
-    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
-    <input type="radio" name="sleepy" value="0"> Awake
-  </div>
+  {{!-- <div class="form-group">
+    <label for="slee">devoured?</label><br>
+    <input type="radio" name="devoured" value="1" checked> devoured!<br>
+    <input type="radio" name="devoured" value="0"> Awake
+  </div> --}}
 
   <button type="submit">Add burger</button>
 </form>
