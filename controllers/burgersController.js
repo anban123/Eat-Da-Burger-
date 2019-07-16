@@ -12,8 +12,6 @@ router.get("/", function(req, res) {
       burgers: data 
     };
     console.log("burgers data ===================================>", hbsObject);
-    console.log("name===============================" + hbsObject.burger_name);
-    console.log("devoured===========================", + hbsObject.devoured);
     res.render("index", hbsObject);
   });
 });
