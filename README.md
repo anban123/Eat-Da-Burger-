@@ -1,6 +1,6 @@
 # Eat-Da-Burger-
 
-Link: https://git.heroku.com/murmuring-journey-86811.git
+Link: [Heroku] (https://git.heroku.com/murmuring-journey-86811.git)
 
 Overview: In this assignment, I created a burger logger with MySQL, Node, Express, Handlebars and a homemade ORM (yum!). I followed the MVC design pattern; used Node and MySQL to query and route data in my app, and Handlebars to generate my HTML.
 
