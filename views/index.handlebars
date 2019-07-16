@@ -6,11 +6,16 @@
   <div class="row">
 
     <div class="col-md-6">
-        <div id="good-burgers"></div>
-        <ul>
+        <div id="good-burgers"></div>  
+        <ul id="good">
           {{#each burgers}} 
             {{#unless devoured}} 
-              {{> burgers/burger-block devour=true}}
+              <li>
+                {{burger_name}}
+                <button class="change-devour" data-id="{{id}}">
+                Devour  
+                </button> 
+              </li> 
             {{/unless}}
           {{/each}}
         </ul>
@@ -18,10 +23,15 @@
 
     <div class="col-md-6">
         <div id="devoured-burgers"></div>
-        <ul>
+        <ul id="devoured">
           {{#each burgers}}
             {{#if devoured}}
-              {{> burgers/burger-block devour=false}}
+                          <li>
+                {{burger_name}}
+                <button class="change-devour" data-id="{{id}}">
+                Undevour 
+                </button> 
+              </li>
             {{/if}}
           {{/each}}
         </ul>
